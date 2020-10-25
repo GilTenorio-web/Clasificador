@@ -10,7 +10,7 @@ from django.http import HttpResponse
 
 class Clasificador(object):
     #Abrimos el archivo de entrenamiento. 
-    docExterno = open("C:/Users/jorge/OneDrive/Escritorio/ProyectoLabII/Proyecto/Clasificador/Corona_NLP_train.csv",encoding="ISO-8859-1")
+    docExterno = open("Corona_NLP_train.csv",encoding="ISO-8859-1")
     covid = pd.read_csv(docExterno, encoding="ISO-8859-1")
     #docExterno.close()
     #Obtenemos las etiquetas de clasificación
@@ -71,14 +71,14 @@ def clasificador(request):
     nb = c2.entrenarModelo(matrizEntrenamiento, datos)
     y_pred = c2.predecir(nb,matrizPrueba)
     
-    docExterno = open("C:/Users/jorge/OneDrive/Escritorio/ProyectoLabII/Proyecto/Clasificador/Plantillas/Plantilla1Clasificador.html") #Importamos la plantilla
+    #docExterno = open("C:/Users/jorge/OneDrive/Escritorio/ProyectoLabII/Proyecto/Clasificador/Plantillas/Plantilla1Clasificador.html") #Importamos la plantilla
     
-    tem = Template(docExterno.read())
-    docExterno.close()   
-    contexto = Context({"cov":c2.covid, "tweets":c2.colTweet, "etiquetas":c2.colEtiquetas, "tiposEtiquetas":c2.tiposEtiquetas,
+    #tem = Template(docExterno.read())
+    #docExterno.close()   
+    contexto = {"cov":c2.covid, "tweets":c2.colTweet, "etiquetas":c2.colEtiquetas, "tiposEtiquetas":c2.tiposEtiquetas,
                         "xEntrenamiento":datos[0],"xPrueba":datos[1],"yEntrenamiento":datos[2],"yPrueba":datos[3],
                         "matrizE":matrizEntrenamiento, "matrizP":matrizPrueba, "data1":atributosE, "data2":atributosP,
-                        'y_pred': y_pred}) 
+                        'y_pred': y_pred}
  
-    documento = tem.render(contexto)
-    return HttpResponse(documento)
+    #documento = tem.render(contexto)
+    return render(request,"clasificador_tweets.html", contexto)
