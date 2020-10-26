@@ -74,10 +74,13 @@ def clasificador(request):
     nb = c2.entrenarModelo(matrizEntrenamiento, datos)
     y_pred = c2.predecir(nb,matrizPrueba)
     
+    #Obtenemos del request lo enviado por el formulario
     tweets = request.GET["tweet"]
+    #Esto lo ingresamos en una matriz
     tweets_nuevos = [tweets] 
     matrizNuevosTweets = c2.creaMatrizPrueba(tweets_nuevos)
 
+    #Realizamos la nueva prediccion
     nuevaPrediccion = c2.predecir(nb,matrizNuevosTweets)
     
     contexto = {"cov":c2.covid, "tweets":c2.colTweet, "etiquetas":c2.colEtiquetas, "tiposEtiquetas":c2.tiposEtiquetas,
