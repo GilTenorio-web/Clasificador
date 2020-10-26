@@ -59,6 +59,9 @@ class Clasificador(object):
     
 
 def clasificador(request):
+
+  
+    
     c2 = Clasificador() #Creamos una instancia de Clasificador()
     datos = c2.particionar()#Se particionan los datos
     
@@ -71,14 +74,24 @@ def clasificador(request):
     nb = c2.entrenarModelo(matrizEntrenamiento, datos)
     y_pred = c2.predecir(nb,matrizPrueba)
     
-    #docExterno = open("C:/Users/jorge/OneDrive/Escritorio/ProyectoLabII/Proyecto/Clasificador/Plantillas/Plantilla1Clasificador.html") #Importamos la plantilla
+    tweets = request.GET["tweet"]
+    tweets_nuevos = [tweets] 
+    matrizNuevosTweets = c2.creaMatrizPrueba(tweets_nuevos)
+
+    nuevaPrediccion = c2.predecir(nb,matrizNuevosTweets)
     
-    #tem = Template(docExterno.read())
-    #docExterno.close()   
     contexto = {"cov":c2.covid, "tweets":c2.colTweet, "etiquetas":c2.colEtiquetas, "tiposEtiquetas":c2.tiposEtiquetas,
                         "xEntrenamiento":datos[0],"xPrueba":datos[1],"yEntrenamiento":datos[2],"yPrueba":datos[3],
                         "matrizE":matrizEntrenamiento, "matrizP":matrizPrueba, "data1":atributosE, "data2":atributosP,
-                        'y_pred': y_pred}
+                        'y_pred': y_pred, 'nuevosTweets':tweets_nuevos,'nuevaPrediccion':nuevaPrediccion}
  
-    #documento = tem.render(contexto)
+    
     return render(request,"clasificador_tweets.html", contexto)
+
+def home(request):
+
+
+    return render(request,"home.html")
+
+
+
