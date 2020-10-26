@@ -88,7 +88,6 @@ def clasificador(request):
                         "matrizE":matrizEntrenamiento, "matrizP":matrizPrueba, "data1":atributosE, "data2":atributosP,
                         'y_pred': y_pred, 'nuevosTweets':tweets_nuevos,'nuevaPrediccion':nuevaPrediccion}
  
-    
     return render(request,"clasificador_tweets.html", contexto)
 
 def home(request):
