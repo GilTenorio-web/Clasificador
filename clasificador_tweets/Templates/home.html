@@ -1,16 +1,51 @@
-{% extends "base.html" %}
+  {% extends "base.html" %}
 
-{% load static %}
+  {% load static %}
 
-{% block content %}
+  {% block content %}
 
-<div style="margin: 10em;" class="text-center">
-    <form action ="/clasificador/" method="get">
-        <textarea placeholder="Ingrese tweet" name="tweet" cols="100" rows="5" style="resize: both;"></textarea>
-        <br>
-        <input type="submit"  value="Enviar">
-    </form>
-</div>
+   <!-- Heading -->
+   <section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'img/principal.jpg' %}" alt="">
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4" >
+            <span class="section-heading-upper">Positvo, Negativo</span>
+            <span class="section-heading-lower">Coronavairuz</span>
+          </h2>
+          <p class="mb-3">clasificador de tweets en 6 sentimientos
+          </p>
+         
+        </div>
+      </div>
+    </div>
+  </section>
 
 
-{% endblock  %}
+    <!-- Message -->
+    <section class="page-section cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta-inner text-center rounded">
+              <h2 class="section-heading mb-4">
+                <span class="section-heading-upper">Compromiso total</span>
+                <span class="section-heading-lower">Garantizado</span>
+              </h2>
+              <p class="mb-0">Con más de 75 años de experiencia a nuestras espaldas, desde Gestión de Pedidos tenemos los conocimientos y herramientas necesarios para llevar cualquier objeto a la puerta de su casa con puntualidad y profesionalidad.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div style="margin: 10em; text-align: center;" >
+      <form action ="/clasificador/" method="get">
+          <textarea placeholder="Ingrese tweet" name="tweet" cols="100" rows="5" style="resize: both;"></textarea>
+          <br>
+          <input type="submit"  value="Enviar">
+      </form>
+  </div>
+
+    {% endblock  %}

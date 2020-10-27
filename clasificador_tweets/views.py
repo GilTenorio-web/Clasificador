@@ -60,7 +60,6 @@ class Clasificador(object):
 
 def clasificador(request):
 
-  
     
     c2 = Clasificador() #Creamos una instancia de Clasificador()
     datos = c2.particionar()#Se particionan los datos
@@ -90,10 +89,14 @@ def clasificador(request):
  
     return render(request,"clasificador_tweets.html", contexto)
 
+
 def home(request):
+    
 
 
     return render(request,"home.html")
+
+
 
 
 
