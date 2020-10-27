@@ -3,7 +3,7 @@
   {% load static %}
 
   {% block content %}
-
+  <!--Aqui se mete todo el contenido -->
    <!-- Heading -->
    <section class="page-section clearfix">
     <div class="container">
@@ -40,6 +40,7 @@
       </div>
     </section>
 
+    <!--Formulario para enviar el tweet-->
     <div style="margin: 10em; text-align: center;" >
       <form action ="/clasificador/" method="get">
           <textarea placeholder="Ingrese tweet" name="tweet" cols="100" rows="5" style="resize: both;"></textarea>
@@ -48,4 +49,4 @@
       </form>
   </div>
 
-    {% endblock  %}
+  {% endblock  %}
