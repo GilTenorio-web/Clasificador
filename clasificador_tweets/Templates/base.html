@@ -11,20 +11,97 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
       
   <!-- Styles -->
-  <link href="{% static 'css/estilos.css' %}" rel="stylesheet">
+  <link href="{% static 'css/gestion.css' %}" rel="stylesheet">
   </head>
 
   <body>
-    <h1 class="site-heading text-center text-white d-none d-lg-block">
-      <span class="site-heading-lower">Clasificador de textos</span>
-    </h1>
-    <!--Contenido cambiante-->
+    <!-- banner-->
+    <div class="banner">
+      <a href="http://www.cua.uam.mx/"><img src="../static/img/banner1.png" alt=""></a>
+    </div>
+
+    <!-- header-->
+    <div class="site-heading-lower">
+      <h1>
+        <span class="header">CLASIFICADOR </span>
+        <span class="header1">DE </span>
+        <span class="header2">TEXTOS</span>
+      </h1>
+    </div>
+
+    <div class="cont">
+      <div class="about">
+        <h1>
+          <span class="about-text">Acerca del <br></span>
+          <span class="about-text1">proyecto</span>
+        </h1>
+        <h1>
+          <span class="descripcion-text">Un texto es una composición de signos codificados en un sistema <br>
+            de escritura que forma una unidad de sentido. También es una <br>
+            composición de caracteres imprimibles generados por un algoritmo <br>
+            de cifrado que, aunque no tienen sentido para cualquier persona,  <br>
+            sí puede ser descifrado por su destinatario original <br>
+          </span>
+        </h1>
+      </div>
+
+      
+
     {% block content %}
     
     
     {% endblock %}
+
+    </div>
     <!-- Bootstrap -->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
     <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    
+    <!-- Integrantes y detalles-->
+    <div class="contenedor">
+      <figure>
+        <img src="../static/img/principal.jpg" alt="">
+        <div class="capa">
+          <h3>Integrantes</h3>
+          <p>
+            Gonzalo Hernandez Montaño <br>
+            Gómez Pineda Eduardo <br>
+            Solis Roblero Eduardo Josue <br>
+            Tenorio Varela Gil 
+          </p>
+        </div>
+      </figure>
+
+      <figure>
+        <img src="../static/img/principal.jpg" alt="">
+        <div class="capa">
+          <h3>Roles</h3>
+          <p>
+            Gonzalo Hernandez Montaño - Programmer<br>
+            Gómez Pineda Eduardo - Design<br>
+            Solis Roblero Eduardo Josue - Design<br>
+            Tenorio Varela Gil - Programmer
+          </p>
+        </div>
+      </figure>
+
+      <figure>
+        <img src="../static/img/principal.jpg" alt="">
+        <div class="capa">
+          <h3>Contacto</h3>
+          <p>
+            Gonzalo Hernandez Montaño <br>
+            Gómez Pineda Eduardo <br>
+            Solis Roblero Eduardo Josue <br>
+            Tenorio Varela Gil 
+          </p>
+        </div>
+      </figure>
+    </div>
+
+    <!-- banner-bottom-->
+    <div class="banner-bottom">
+      <h5>| UAMC | UNIVERSIDAD AUTÓNOMA METROPOLITANA - UNIDAD CUAJIMALPA</h3>
+    </div>
   </body>
 </html>

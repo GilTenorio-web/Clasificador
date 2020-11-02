@@ -4,9 +4,12 @@
 
 {% block content %}
 
-<div class="container site-heading text-white border border-secondary">
-    <h3 class="site-heading">Tweet analizado:  {{nuevosTweets.0}}</h3><br>
-    <h3 class ="site-heading">Este tweet se clasifico como:  {{nuevaPrediccion.0}}</h3>
+
+<br>
+<br>
+<div class="clasify">
+    <h3 class="head_analize">Tweet analizado:  {{nuevosTweets.0}}</h3><br>
+    <h3 class ="head_clasify">Este tweet se clasifico como:  <span class="prediccion">{{nuevaPrediccion.0}}</span></h3>
 </div>
 
 {% endblock  %}

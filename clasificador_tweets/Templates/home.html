@@ -3,14 +3,18 @@
 {% load static %}
 
 {% block content %}
+<div class="tweet">
+    <h3>Ingresa tweet</h3>
+  </div>
 
-<div style="margin: 10em;" class="text-center">
-    <form action ="/clasificador/" method="get">
-        <textarea placeholder="Ingrese tweet" name="tweet" cols="100" rows="5" style="resize: both;"></textarea>
-        <br>
-        <input type="submit"  value="Enviar">
-    </form>
+<!--Contenido cambiante-->
+
+<div class="form_conf" style="margin: 10em;">
+  <form action ="/clasificador/" method="get">
+      <textarea name="tweet" cols="100" rows="5" style="resize:none;"></textarea>
+      <br>
+      <input type="submit"  value="Enviar">
+  </form>
 </div>
-
 
 {% endblock  %}

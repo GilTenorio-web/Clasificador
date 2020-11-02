@@ -6,6 +6,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.naive_bayes import MultinomialNB
 from django.http import HttpResponse
+from bokeh.plotting import figure, output_file, show
+from bokeh.embed import components
+
 # Create your views here.
 
 class Clasificador(object):
@@ -57,6 +60,11 @@ class Clasificador(object):
         y_pred = nb.predict(matriz)
         return  y_pred
     
+    def metricaConfusion(self, datos, y_pred):
+        return metrics.confusion_matrix(datos[3], y_pred)
+    
+
+    
 
 def clasificador(request):
 
@@ -93,8 +101,12 @@ def clasificador(request):
 def home(request):
     
 
-
     return render(request,"home.html")
+
+
+
+
+
 
 
 
