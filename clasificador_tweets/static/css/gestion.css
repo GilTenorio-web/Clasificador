@@ -193,13 +193,9 @@ body {
 
 /**/
 .clasify{
-  background-color: #fff;
-  padding: 50px;
-}
-
-.head_analize, .head_clasify{
-  font-size: 50px;
-  color: #444444;
+  background-color: #fff;  
+  padding-top: 100px;
+  padding-left: 50px;
   font-family: sans-serif;
 }
 
@@ -210,4 +206,32 @@ body {
   font-family: sans-serif;
   color: #eedf09;
   text-decoration: underline;
+}
+
+/*Etiquetas*/
+
+.visual figure{
+  position: relative;
+  width: 50%;
+  height: 75%;
+
+}
+
+.visual figure img{
+  padding: 25px;
+  width: 100%;
+  height: 100%;
+}
+
+.visual figure .visual1{
+  position: relative;
+}
+
+.visual figure .visual2{
+  position: absolute;
+}
+
+.visual figure .visual3{
+  position: relative;
+  left: 50%;
 }
