@@ -1,6 +1,4 @@
 # Clasificador
-Este proyecto es para la UEA de Laboratorio Tematico 2
+Este proyecto es para la UEA de Laboratorio Tematico 2 De la UAM unidad cuajimalpa
 
 
-Lo descargan y lo meten en la carpeta donde tienen su entorno virtual
-aaaa
