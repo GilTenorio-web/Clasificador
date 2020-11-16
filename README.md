@@ -1,5 +1,5 @@
 # Clasificador
-Este proyecto es para la UEA de Laboratorio Tematico 2 De la UAM unidad cuajimalpa
+Este proyecto es para la UEA de Laboratorio Tematico 2 de la Licenciatura de Tecnologías de la información y comunciación de la Universidad Autonóma Metropolitana unidad cuajimalpa.
 
 
 Requisitos mínimos
