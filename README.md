@@ -28,3 +28,18 @@ Corona_NLP_train.csv
 Miglani, A. (2020). Corona_NLP_train[Dataset]. https://www.kaggle.com/datatattle/covid-19-nlp-text-classification?select=Corona_NLP_train.csv.
 
 
+
+********************************************************************************************************************************************************
+
+
+
+Enlaces relevantes
+
+
+
+Notebook de las gráficas: https://colab.research.google.com/drive/19U_lhk-od9JalLELdCaq9eFDD4EaPQ-o
+
+
+
+
+
