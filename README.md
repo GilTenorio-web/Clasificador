@@ -20,12 +20,12 @@ Referencias
 
 Corona_NLP_test.csv
 
-Miglani, A. (2020). Corona_NLP_test[Dataset]. https://www.kaggle.com/datatattle/covid-19-nlp-text-classification.
+Miglani, A. (2020). Corona_NLP_test[Dataset].https://www.kaggle.com/datatattle/covid-19-nlp-text-classification
 
 
 Corona_NLP_train.csv
 
-Miglani, A. (2020). Corona_NLP_train[Dataset]. https://www.kaggle.com/datatattle/covid-19-nlp-text-classification?select=Corona_NLP_train.csv.
+Miglani, A. (2020). Corona_NLP_train[Dataset].https://www.kaggle.com/datatattle/covid-19-nlp-text-classification?select=Corona_NLP_train.csv
 
 
 
